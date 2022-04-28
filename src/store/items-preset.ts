@@ -1,4 +1,4 @@
-export const generatorList = [
+export const itemsPreset = [
   {
     tag: 'n-input',
     label: '文本输入',

@@ -1,0 +1,16 @@
+.previewer {
+  .sortable-ghost {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding-top: 5px;
+    height: 60px;
+    color: var(--primary-color);
+    border: 2px dashed var(--primary-color);
+    border-radius: 8px;
+
+    span {
+      color: transparent;
+    }
+  }
+}
