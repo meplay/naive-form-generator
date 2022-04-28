@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Draggable from 'vuedraggable'
+import FormItem from './FormItem.vue'
 import { useItemStore } from '@/store/item'
 
 const itemStore = useItemStore()
@@ -28,9 +29,7 @@ const log = (evt: any) => {
         @change="log"
       >
         <template #item="{ element }">
-          <div>
-            {{ element.label }}
-          </div>
+          <form-item :element="element" />
         </template>
       </draggable>
 

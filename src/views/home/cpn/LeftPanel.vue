@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Draggable from 'vuedraggable'
+import { cloneDeep } from 'lodash'
 import { useItemStore } from '@/store/item'
 
 const itemStore = useItemStore()
@@ -10,6 +11,12 @@ const log = (evt: any) => {
 const handleEnd = (e: any) => {
   if (e.to !== e.from)
     window.console.log('drag end')
+}
+
+let tempItem
+const cloneItem = (origin: any) => {
+  const clone = cloneDeep(origin)
+  return tempItem = clone
 }
 </script>
 
@@ -24,6 +31,7 @@ const handleEnd = (e: any) => {
       :group="{ name: 'components', pull: 'clone', put: false }"
       item-key="tag"
       :sort="false"
+      :clone="cloneItem"
       @change="log"
       @end="handleEnd"
     >

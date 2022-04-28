@@ -3,11 +3,13 @@ export const itemsPreset = [
     tag: 'n-input',
     label: '文本输入',
     icon: 'text',
+    placeholder: '请输入',
   },
   {
     tag: 'n-select',
     label: '下拉选择',
     icon: 'select',
+    placeholder: '请选择',
   },
   {
     tag: 'n-slider',
