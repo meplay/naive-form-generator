@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div>form-item</div>
+  <div>right panel</div>
 </template>
 
 <style lang="scss" scoped></style>

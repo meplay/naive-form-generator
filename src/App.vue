@@ -1,9 +1,8 @@
 <script setup lang="ts">
-
 </script>
 
 <template>
-  <div>preview</div>
+  <router-view />
 </template>
 
 <style lang="scss" scoped></style>

@@ -23,7 +23,9 @@
   },
   "homepage": "https://github.com/zb980921/naive-form-generator#readme",
   "dependencies": {
-    "vue": "^3.2.33"
+    "vue": "^3.2.33",
+    "vue-router": "^4.0.14",
+    "vuedraggable": "^4.1.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.2.3",

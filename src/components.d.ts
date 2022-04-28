@@ -7,6 +7,8 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     FormItem: typeof import('./components/FormItem.vue')['default']
     NScrollbar: typeof import('naive-ui')['NScrollbar']
+    RouterLink: typeof import('vue-router')['RouterLink']
+    RouterView: typeof import('vue-router')['RouterView']
   }
 }
 

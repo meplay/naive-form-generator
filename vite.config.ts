@@ -31,6 +31,7 @@ export default defineConfig(({ mode }) => {
       AutoImport({
         imports: [
           'vue',
+          'vue-router',
         ],
         dts: 'src/auto-imports.d.ts',
       }),
@@ -48,14 +49,5 @@ export default defineConfig(({ mode }) => {
 
       Windicss(),
     ],
-
-    build: {
-      rollupOptions: {
-        input: {
-          index: resolvePath('./index.html'),
-          preview: resolvePath('./preview.html'),
-        },
-      },
-    },
   }
 })
