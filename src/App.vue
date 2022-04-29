@@ -1,8 +1,11 @@
 <script setup lang="ts">
+import { NConfigProvider, zhCN } from 'naive-ui'
 </script>
 
 <template>
-  <router-view />
+  <n-config-provider :locale="zhCN">
+    <router-view />
+  </n-config-provider>
 </template>
 
 <style>

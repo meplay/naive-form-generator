@@ -1,29 +1,49 @@
+import {
+  NCheckboxGroup,
+  NInput,
+  NRadioGroup,
+  NSelect,
+  NSlider,
+} from 'naive-ui'
+
 export const itemsPreset = [
   {
-    tag: 'n-input',
+    tag: NInput,
     label: '文本输入',
     icon: 'text',
     placeholder: '请输入',
   },
   {
-    tag: 'n-select',
+    tag: NSelect,
     label: '下拉选择',
     icon: 'select',
     placeholder: '请选择',
+    options: [
+      { label: '选项一', value: 1 },
+      { label: '选项二', value: 2 },
+    ],
   },
   {
-    tag: 'n-slider',
+    tag: NSlider,
     label: '滑块',
     icon: 'slider',
   },
   {
-    tag: 'n-radio-group',
+    tag: NRadioGroup,
     label: '单选框组',
     icon: 'radio',
+    options: [
+      { label: '选项一', value: 1 },
+      { label: '选项二', value: 2 },
+    ],
   },
   {
-    tag: 'n-checkbox-group',
+    tag: NCheckboxGroup,
     label: '多选框组',
     icon: 'checkbox',
+    options: [
+      { label: '选项一', value: 1 },
+      { label: '选项二', value: 2 },
+    ],
   },
 ]

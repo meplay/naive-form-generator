@@ -7,10 +7,21 @@
     height: 60px;
     color: var(--primary-color);
     border: 2px dashed var(--primary-color);
-    border-radius: 8px;
+    border-radius: 6px;
 
     span {
       color: transparent;
+    }
+  }
+
+  .draggable-item {
+    border-radius: 6px;
+    height: 60px;
+    align-items: center;
+    padding: 10px;
+    cursor: move;
+    &:hover {
+      background: rgb(229, 246, 228);
     }
   }
 }

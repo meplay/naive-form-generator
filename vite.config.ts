@@ -5,6 +5,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import svgLoader from 'vite-svg-loader'
 import Windicss from 'vite-plugin-windicss'
+import vueJsx from '@vitejs/plugin-vue-jsx'
 
 function resolvePath(dir: string) {
   return path.resolve(__dirname, dir)
@@ -26,7 +27,7 @@ export default defineConfig(({ mode }) => {
 
     plugins: [
       Vue(),
-
+      vueJsx(),
       AutoImport({
         imports: [
           'vue',
@@ -34,7 +35,6 @@ export default defineConfig(({ mode }) => {
         ],
         dts: 'src/auto-imports.d.ts',
       }),
-
       Components({
         extensions: ['vue'],
         include: [/\.vue$/, /\.vue\?vue/],
@@ -42,9 +42,7 @@ export default defineConfig(({ mode }) => {
         resolvers: [
         ],
       }),
-
       svgLoader(),
-
       Windicss(),
     ],
   }

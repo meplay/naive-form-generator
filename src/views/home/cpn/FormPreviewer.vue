@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Draggable from 'vuedraggable'
-import FormItem from './FormItem.vue'
+import { NForm, NScrollbar } from 'naive-ui'
+import DraggableItem from './DraggableItem'
 import { useItemStore } from '@/store/item'
 
 const itemStore = useItemStore()
@@ -19,6 +20,7 @@ const log = (evt: any) => {
     <n-form
       style="height: calc(100vh - 84px);"
       class="previewer relative cursor-default"
+      label-placement="left"
     >
       <draggable
         class="h-full"
@@ -29,7 +31,7 @@ const log = (evt: any) => {
         @change="log"
       >
         <template #item="{ element }">
-          <form-item :element="element" />
+          <draggable-item :element="element" />
         </template>
       </draggable>
 
