@@ -21,6 +21,8 @@ const log = (evt: any) => {
       style="height: calc(100vh - 84px);"
       class="previewer relative cursor-default"
       label-placement="left"
+      label-align="right"
+      :label-width="100"
     >
       <draggable
         class="h-full"

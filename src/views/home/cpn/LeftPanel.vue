@@ -3,21 +3,20 @@ import Draggable from 'vuedraggable'
 import { cloneDeep } from 'lodash'
 import { NScrollbar } from 'naive-ui'
 import { useItemStore } from '@/store/item'
+import type { IItemConfig } from '@/store/types'
 
 const itemStore = useItemStore()
 
-const log = (evt: any) => {
-  window.console.log(evt)
+let tempId = -1
+const cloneItem = (origin: IItemConfig) => {
+  const clone = cloneDeep(origin)
+  tempId = +new Date()
+  clone.renderId = tempId
+  return clone
 }
 const handleEnd = (e: any) => {
   if (e.to !== e.from)
-    window.console.log('drag end')
-}
-
-let tempItem
-const cloneItem = (origin: any) => {
-  const clone = cloneDeep(origin)
-  return tempItem = clone
+    itemStore.setActiveId(tempId)
 }
 </script>
 
@@ -33,7 +32,6 @@ const cloneItem = (origin: any) => {
       item-key="tag"
       :sort="false"
       :clone="cloneItem"
-      @change="log"
       @end="handleEnd"
     >
       <template #item="{ element }">

@@ -1,14 +1,29 @@
 import { defineStore } from 'pinia'
 import { itemsPreset } from './items-preset'
+import type { IItemConfig } from './types'
+
+interface IState {
+  itemsPreset: IItemConfig[]
+  itemsAdded: IItemConfig[]
+  activeId?: number
+}
 
 export const useItemStore = defineStore('item', {
-  state: () => ({
+  state: (): IState => ({
     itemsPreset,
-    activeItem: null,
     itemsAdded: [],
+    activeId: undefined,
   }),
 
-  getters: {},
+  getters: {
+    activeItem(state) {
+      return state.itemsAdded.find(item => item.renderId === this.activeId)!
+    },
+  },
 
-  actions: {},
+  actions: {
+    setActiveId(renderId: number) {
+      this.activeId = renderId
+    },
+  },
 })

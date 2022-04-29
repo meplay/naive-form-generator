@@ -19,8 +19,11 @@
     height: 60px;
     align-items: center;
     padding: 10px;
+    margin-bottom: 10px;
     cursor: move;
-    &:hover {
+
+    &:hover,
+    &.active-item {
       background: rgb(229, 246, 228);
     }
   }
