@@ -10,7 +10,7 @@ specifiers:
   cz-conventional-changelog: ^3.3.0
   eslint: ^8.14.0
   husky: ^7.0.4
-  lodash: ^4.17.21
+  lodash-es: ^4.17.21
   naive-ui: ^2.28.2
   pinia: ^2.0.13
   sass: ^1.51.0
@@ -26,7 +26,7 @@ specifiers:
   windicss: ^3.5.1
 
 dependencies:
-  lodash: 4.17.21
+  lodash-es: 4.17.21
   pinia: 2.0.13_typescript@4.6.3+vue@3.2.33
   vue: 3.2.33
   vue-router: 4.0.14_vue@3.2.33
@@ -3070,7 +3070,6 @@ packages:
 
   /lodash-es/4.17.21:
     resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
-    dev: true
 
   /lodash.map/4.6.0:
     resolution: {integrity: sha512-worNHGKLDetmcEYDvh2stPCrrQRkP20E4l0iIS7F8EvzMqBBi7ltvFN5m1HvTf1P7Jk1txKhvFcmYsCr8O2F1Q==}
@@ -3082,6 +3081,7 @@ packages:
 
   /lodash/4.17.21:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
+    dev: true
 
   /longest/2.0.1:
     resolution: {integrity: sha512-Ajzxb8CM6WAnFjgiloPsI3bF+WCxcvhdIG3KNA2KN962+tdBsHcuQ4k4qX/EcS/2CRkcc0iAkR956Nib6aXU/Q==}

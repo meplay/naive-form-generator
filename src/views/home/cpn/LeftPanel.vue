@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Draggable from 'vuedraggable'
-import { cloneDeep } from 'lodash'
+import { cloneDeep } from 'lodash-es'
 import { NScrollbar } from 'naive-ui'
 import { useItemStore } from '@/store/item'
 import type { IItemConfig } from '@/store/types'

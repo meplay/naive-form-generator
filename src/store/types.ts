@@ -13,4 +13,5 @@ export interface IItemConfig {
   counter?: boolean
   clearable?: boolean
   slot?: any
+  type?: string
 }

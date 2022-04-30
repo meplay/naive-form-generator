@@ -18,6 +18,7 @@ export const itemsPreset: IItemConfig[] = [
     label: '文本',
     icon: 'text',
     placeholder: '请输入',
+    type: 'text',
   },
   {
     component: NSelect,

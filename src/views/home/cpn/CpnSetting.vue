@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { NForm, NFormItem, NInput, NInputNumber, NSlider, NSwitch } from 'naive-ui'
+import { NForm, NFormItem, NInput, NInputNumber, NSelect, NSlider, NSwitch } from 'naive-ui'
 import { useItemStore } from '@/store/item'
 
 const itemStore = useItemStore()
@@ -50,6 +50,16 @@ const activeItem = computed(() => {
 
     <!-- 文本型 -->
     <template v-if="activeItem.component.name === 'Input'">
+      <n-form-item label="文本类型">
+        <n-select
+          v-model:value="activeItem.type"
+          :options="[
+            {label: '单行文本', value: 'text'},
+            {label: '多行文本', value: 'textarea'},
+            {label: '密码', value: 'password'},
+          ]"
+        />
+      </n-form-item>
       <n-form-item label="最多输入">
         <n-input-number v-model:value="activeItem.maxLength" />
       </n-form-item>

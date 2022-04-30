@@ -35,9 +35,10 @@ export default defineComponent({
         <NFormItemGi
           className={`draggable-item ${this.element.renderId === this.activeRenderId ? 'active-item' : ''}`}
           showFeedback={false}
-          span={24}
+          span={this.element.span}
           label={this.element.label}
           onClick={() => this.clickItem(this.element.renderId!)}
+          style={{ height: `${this.element.type === 'textarea' ? 'auto' : '60px'}` }}
         >
           {render(this.element)}
         </NFormItemGi>
